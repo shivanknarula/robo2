@@ -1,0 +1,73 @@
+.robotic-offerings-section {
+  text-align: center;
+  margin: 40px 0;
+  background-color: #f9f9f9;
+  padding: 20px 10px; /* Adjust padding for better spacing */
+}
+
+.robotic-offerings-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.robotic-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust min width for better fit */
+  gap: 15px; /* Reduce gap for better alignment */
+  padding: 0 10px; /* Add padding to prevent overflow */
+}
+
+.elementor-element {
+  text-align: center;
+}
+
+.elementor-element img {
+  width: 50%;
+  max-width: 50px; /* Reduce max width for better fit */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.elementor-element h3 {
+  margin-top: 8px; /* Reduce margin for better spacing */
+  font-size: 13px; /* Adjust font size for better fit */
+  font-weight: 600;
+  color: #333;
+}
+
+.elementor-element a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.elementor-element:hover h3 {
+  color: #007bff;
+}
+
+.elementor-image-box-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elementor-image-box-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.elementor-image-box-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.elementor-image-box-content h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}

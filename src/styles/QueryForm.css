@@ -1,0 +1,92 @@
+.query-form-container {
+  background-color: white;
+  padding: 1.5rem; /* Reduced from 2rem */
+  margin: 1.5rem auto; /* Reduced from 2rem */
+  max-width: 600px; /* Reduced from 800px */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.query-form-header {
+  background-color: #ff5733; /* Orange color unchanged */
+  padding: 0.1rem; /* Reduced from 0.5rem */
+  text-align: center;
+  margin-bottom: .01rem;
+}
+
+.query-form-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 1rem; /* Reduced from 1.5rem */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.query-form-subtext {
+  text-align: center;
+  font-size: 0.8rem; /* Reduced from 1rem */
+  color: #333;
+  margin-bottom: 1rem; /* Reduced from 1.5rem */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.query-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Reduced minmax from 200px to 150px */
+  gap: 0.75rem; /* Reduced from 1rem */
+  margin-bottom: 1rem; /* Reduced from 1.5rem */
+}
+
+.query-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.query-form-field label {
+  font-size: 0.75rem; /* Reduced from 0.9rem */
+  color: #666;
+  margin-bottom: 0.2rem; /* Reduced from 0.25rem */
+}
+
+.query-form-field input,
+.query-form-field textarea {
+  padding: 0.4rem; /* Reduced from 0.5rem */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 0.8rem; /* Reduced from 1rem */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.query-form-field textarea {
+  height: 80px; /* Reduced from 100px */
+  resize: vertical;
+}
+
+.query-form-message {
+  grid-column: 1 / -1; /* Span all columns, unchanged */
+}
+
+.query-form-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem; /* Reduced from 0.75rem 2rem */
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem; /* Reduced from 1rem */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.query-form-submit:hover {
+  background-color: #333;
+}
+
+@media (max-width: 500px) { /* Adjusted from 600px to match smaller form width */
+  .query-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,7 @@
+.industry-box {
+  transition: transform 0.2s ease-in-out;
+}
+
+.industry-box:hover {
+  transform: scale(1.05);
+}
