@@ -36,12 +36,12 @@ const RoboticOfferings = () => {
             <h3>Painting Robot</h3>
           </a>
         </div>
-        <div className="elementor-element">
+        {/* <div className="elementor-element">
           <a href="https://www.evsrobot.com/6-axis-robot_c6" aria-label="6 Axis Robot">
             <img src="/assets/6-axis-robot.jpg" alt="6 Axis Robot" />
             <h3>6 Axis Robot</h3>
           </a>
-        </div>
+        </div> */}
         <div className="elementor-element">
           <a href="https://www.evsrobot.com/scara-robot_c7" aria-label="SCARA Robot">
             <img src="/assets/SCARA-robot.png" alt="SCARA Robot" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 import RoboticOfferings from '../components/RoboticOfferings';
 import '../styles/home.css';
 
@@ -7,17 +8,22 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Hero Section */}
-      <section className="hero-section">
-        <video autoPlay muted loop className="hero-video">
-          <source src="/bckvid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="hero-content">
-          <h1>Robros-Next: Precision Automation</h1>
-          <p>High-speed, precise collaborative robots for modern manufacturing across industries.</p>
-          <button className="cta-button" aria-label="Get a Quote">
-            Get a Quote
-          </button>
+      <section className="relative w-full h-screen overflow-hidden hero-section">
+        <ReactPlayer
+          url="/bckvid.webm" // Ensure this file exists in the root directory
+          playing
+          loop
+          muted
+          playsinline
+          width="100%"
+          height="67%"
+          className="absolute top-0 left-0 z-0 react-player-bg"
+        />
+
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold">Robros-Next: Precision Automation</h1>
+          <p className="mt-4 max-w-xl text-lg">High-speed, precise collaborative robots for modern manufacturing across industries.</p>
+          <button className="cta-button mt-6" aria-label="Get a Quote">Get a Quote</button>
         </div>
       </section>
 
@@ -51,42 +57,38 @@ const Home = () => {
       <section className="solutions-section">
         <h2>Applications</h2>
         <p>Dobot's robots are capable of performing a wide range of tasks more efficiently.</p>
-        
-        
-        {/* Showcase Blocks */}
         <div className="showcase-grid">
           <div className="showcase-item">
-            <img src="/icons/welding.svg" alt="Welding" />
+            <img src="/icons/welding.svg" alt="Welding Icon" /> {/* Ensure this file exists */}
             <h3>Welding</h3>
             <p>Precision welding solutions for automotive, aerospace, and more.</p>
             <Link to="/products" className="showcase-link">Learn More</Link>
           </div>
           <div className="showcase-item">
-            <img src="/icons/palletizing.svg" alt="Palletizing" />
+            <img src="/icons/palletizing.svg" alt="Palletizing Icon" /> {/* Ensure this file exists */}
             <h3>Palletizing</h3>
             <p>Automate stacking and packing for efficient logistics.</p>
             <Link to="/products" className="showcase-link">Learn More</Link>
           </div>
           <div className="showcase-item">
-            <img src="/icons/assembly.svg" alt="Assembly" />
+            <img src="/icons/assembly.svg" alt="Assembly Icon" /> {/* Ensure this file exists */}
             <h3>Assembly</h3>
             <p>Streamline production with high-speed assembly robots.</p>
             <Link to="/products" className="showcase-link">Learn More</Link>
           </div>
           <div className="showcase-item">
-            <img src="/icons/bin-picking.svg" alt="Bin Picking" />
+            <img src="/icons/bin-picking.svg" alt="Bin Picking Icon" /> {/* Ensure this file exists */}
             <h3>Bin Picking</h3>
             <p>Advanced vision systems for automated bin picking tasks.</p>
             <Link to="/products" className="showcase-link">Learn More</Link>
           </div>
         </div>
         <Link to="/products" className="learn-more-link">Learn More &gt;</Link>
-
       </section>
 
       {/* Why Choose Us Section */}
       <section className="why-choose-section">
-        <h2>Why Choose EVS Robotics?</h2>
+        <h2>Why Choose Us?</h2>
         <div className="features-grid">
           <div className="feature-item">
             <h3>High Payload Capacity</h3>
@@ -94,7 +96,7 @@ const Home = () => {
           </div>
           <div className="feature-item">
             <h3>Explosion-Proof Design</h3>
-            <p>First in China with certified explosion-proof robots.</p>
+            <p>Engineered for safety with explosion-proof design.</p>
           </div>
           <div className="feature-item">
             <h3>Customizable Solutions</h3>

@@ -26,7 +26,7 @@ function ProductCard({ product, onClick }) {
             fontSize: '1.5rem', // Slightly larger for prominence
             margin: '0 0 0.5rem',
             fontFamily: 'system-ui, Avenir, Helvetica, Arial, sans-serif', // From index.css
-            color: 'rgba(255, 255, 255, 0.87)', // Match index.css dark mode
+            color: 'rgba(14, 13, 13, 0.87)', // Match index.css dark mode
             fontWeight: 500, // Match index.css link weight
           }}
         >

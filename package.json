@@ -1,6 +1,6 @@
 {
-  "name": "my-robros-app",
-  "homepage": "https://shivanknarula.github.io/robros-next2",
+  "name": "robo2",
+  "homepage": "https://shivanknarula.github.io/robo2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,11 +13,15 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@tailwindcss/vite": "^4.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.56.1",
-    "react-router-dom": "^7.5.2"
+    "react-player": "^2.16.0",
+    "react-router-dom": "^7.5.2",
+    "tailwindcss": "^4.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",

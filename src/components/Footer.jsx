@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="newsletter-section">
           <h3>Join Our Newsletter</h3>
-          <p>Get the latest technological information on our product development.</p>
+          
           <form onSubmit={handleNewsletterSubmit} className="newsletter-form">
             <input
               type="email"
@@ -39,7 +39,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="footer-text">© 2023 EVS Tech Co., Ltd. All rights reserved.</p>
+      <p className="footer-text">© 2025 ROBROS-NEXT All rights reserved.</p>
     </footer>
   );
 };

@@ -45,30 +45,8 @@ const Navbar = () => {
             <li><a href="/">Home</a></li>
             <li><a href="/who-we-are">Who We Are</a></li>
             <li><a href="/products">Products</a></li>
-            {/* <li
-              className="dropdown"
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={toggleDropdown}
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-            >
-              <a href="#solutions" aria-haspopup="true" aria-expanded={dropdownOpen}>
-                Solutions
-              </a>
-              {dropdownOpen && (
-                <ul className="dropdown-menu" role="menu">
-                  <li><a href="#welding" role="menuitem">Welding</a></li>
-                  <li><a href="#palletizing" role="menuitem">Palletizing</a></li>
-                  <li><a href="#loading" role="menuitem">Loading and Unloading</a></li>
-                  <li><a href="#assembly" role="menuitem">Assembly</a></li>
-                  <li><a href="#bin-picking" role="menuitem">Bin Picking</a></li>
-                  <li><a href="#gluing" role="menuitem">Gluing</a></li>
-                  <li><a href="#insertion" role="menuitem">Insertion</a></li>
-                  <li><a href="#polishing" role="menuitem">Polishing</a></li>
-                </ul>
-              )}
-            </li> */}
             <li><a href="#download">Download</a></li>
-            <li><a href="#videos">Videos</a></li>
+            <li><a href="/product-videos">Videos</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
           </ul>
         </div>

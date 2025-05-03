@@ -1,91 +1,210 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/contact-us.css';
 
 const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
+      firstName: e.target.firstName.value,
+      lastName: e.target.lastName.value,
       phone: e.target.phone.value,
+      email: e.target.email.value,
+      company: e.target.company.value,
+      country: e.target.country.value,
+      state: e.target.state.value,
+      salesContact: e.target.salesContact.value,
       message: e.target.message.value,
+      agreement: e.target.agreement.checked,
     };
     console.log('Contact form submission:', formData);
     e.target.reset();
   };
 
   return (
-    <div className="contact-us-container">
-      <section className="contact-hero">
-        <h1>Contact Us</h1>
-        <p>Reach out to discuss your automation needs or request a quote.</p>
-      </section>
+    <div className="contact-us-page">
+      <div className="content-wrapper">
+        {/* Header */}
+        <div className="text-center">
+          <h1 className="page-title">Contact Us</h1>
+          <p className="page-subtitle">Automation transformation is a collective effort. Let’s do it together.</p>
+        </div>
 
-      <section className="contact-form-section">
-        <div className="contact-form-wrapper">
-          <h2>Get in Touch</h2>
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <label htmlFor="name">Name *</label>
+        {/* Form Section */}
+        <form onSubmit={handleSubmit} className="coopfit-box">
+          {/* Two-column grid for First Name and Last Name */}
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <input
+              type="text"
+              name="firstName"
+              required
+              aria-required="true"
+              placeholder="First Name *"
+              className="form-input white fz-14"
+              maxLength="255"
+            />
+          </div>
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <input
+              type="text"
+              name="lastName"
+              required
+              aria-required="true"
+              placeholder="Last Name *"
+              className="form-input white fz-14"
+              maxLength="255"
+            />
+          </div>
+
+          {/* Two-column grid for Phone Number and Business Email */}
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <input
+              type="tel"
+              name="phone"
+              required
+              aria-required="true"
+              placeholder="Phone Number *"
+              className="form-input white fz-14"
+              maxLength="255"
+            />
+          </div>
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <input
+              type="email"
+              name="email"
+              required
+              aria-required="true"
+              placeholder="Business Email *"
+              className="form-input white fz-14"
+              maxLength="255"
+            />
+          </div>
+
+          {/* Two-column grid for Company and Country */}
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <input
+              type="text"
+              name="company"
+              required
+              aria-required="true"
+              placeholder="Company *"
+              className="form-input white fz-14"
+              maxLength="255"
+            />
+          </div>
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <select
+              name="country"
+              required
+              aria-required="true"
+              className="form-input white fz-14"
+            >
+              <option value="" disabled selected>Country *</option>
+              <option value="USA">USA</option>
+              <option value="China">China</option>
+              <option value="India">India</option>
+              {/* Add more countries as needed */}
+            </select>
+          </div>
+
+          {/* Two-column grid for State/Province and Sales Contact */}
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <input
+              type="text"
+              name="state"
+              placeholder="State/Province"
+              className="form-input white fz-14"
+              maxLength="255"
+            />
+          </div>
+          <div className="coopfit-item col-50 mt-20" wrap="">
+            <select
+              name="salesContact"
+              required
+              aria-required="true"
+              className="form-input white fz-14"
+            >
+              <option value="" disabled selected>Sales Contact *</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          {/* Message Textarea */}
+          <div className="coopfit-item col-50 mt-20" wrap="" style={{ width: '100%' }}>
+            <textarea
+              name="message"
+              required
+              aria-required="true"
+              placeholder="Please include relevant information to help us better respond to your request *"
+              rows="4"
+              className="form-input white fz-14"
+              style={{ width: '100%', resize: 'vertical' }}
+            ></textarea>
+          </div>
+
+          {/* Agreement Checkbox */}
+          <div className="coopfit-item col-50 mt-20" wrap="" style={{ width: '100%' }}>
+            <div className="checkbox-wrapper">
               <input
-                type="text"
-                id="name"
-                name="name"
+                type="checkbox"
+                name="agreement"
                 required
                 aria-required="true"
-                placeholder="Your full name"
+                className="checkbox-input"
               />
+              <label htmlFor="agreement" className="checkbox-label">
+                I have read & agree to the{' '}
+                <Link to="/user-agreement" className="link">User Registration Agreement</Link>{' '}
+                &{' '}
+                <Link to="/privacy-statement" className="link">Privacy Statement</Link>{' '}
+                of Dobot Robotics <span className="required-asterisk">*</span>
+              </label>
             </div>
-            <div className="form-group">
-              <label htmlFor="email">Email *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                aria-required="true"
-                placeholder="Your email address"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Your phone number"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message *</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                aria-required="true"
-                placeholder="Tell us about your needs"
-                rows="5"
-              ></textarea>
-            </div>
-            <button type="submit" className="cta-button" aria-label="Submit contact form">
-              Send Message
+          </div>
+
+          {/* Submit Button */}
+          <div className="text-center mt-20">
+            <button
+              type="submit"
+              className="submit-button"
+              aria-label="Submit contact form"
+            >
+              Submit
             </button>
-          </form>
+          </div>
+        </form>
+
+        {/* Social Media Icons */}
+        <div className="text-center mt-20">
+          <p className="social-title">Follow Us</p>
+          <div className="social-icons">
+            <a href="https://facebook.com" aria-label="Facebook" className="social-icon">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com" aria-label="X" className="social-icon">
+              <i className="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com" aria-label="Instagram" className="social-icon">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" className="social-icon">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://youtube.com" aria-label="YouTube" className="social-icon">
+              <i className="fab fa-youtube"></i>
+            </a>
+          </div>
         </div>
-        <div className="contact-info">
-          <h3>Contact Information</h3>
-          <p>
-            <i className="fas fa-phone"></i> +86 19381626253
-          </p>
-          <p>
-            <i className="fas fa-envelope"></i>{' '}
-            <a href="mailto:sales@evsrobot.com">sales@evsrobot.com</a>
-          </p>
-          <p>
-            <i className="fas fa-map-marker-alt"></i> EVS Tech Co., Ltd., China
-          </p>
-        </div>
-      </section>
+
+        {/* Chat Button */}
+        <button
+          className="chat-button"
+          aria-label="Open chat"
+        >
+          <i className="fas fa-comment-alt"></i>
+        </button>
+      </div>
     </div>
   );
 };

@@ -93,13 +93,11 @@ function ProductPage() {
     <div className="product-page">
       <Header productName={selectedProduct ? (selectedProduct.heading || selectedProduct.name) : 'Product Line'} />
       {selectedProduct ? (
-        <>
-          <ProductDetail product={selectedProduct} onBack={() => setSelectedProduct(null)} />
-          <QueryForm /> {/* Render QueryForm only when a product is selected */}
-        </>
+        <ProductDetail product={selectedProduct} onBack={() => setSelectedProduct(null)} />
       ) : (
         <ProductList products={products} onSelectProduct={setSelectedProduct} />
       )}
+      <QueryForm />
     </div>
   );
 }
