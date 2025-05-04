@@ -19,7 +19,7 @@ import './styles/videos.css';
 
 const App = () => {
   return (
-    <HashRouter>
+    <HashRouter >
       <div className="app-container">
         <Navbar />
         <main>
